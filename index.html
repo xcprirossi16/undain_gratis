@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roda Undian GRATIS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: linear-gradient(120deg, #ffe8e8, #fff5f5);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: white;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #222;
+        }
+
+        .logo span {
+            color: red;
+            border-bottom: 2px solid red;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+            margin-top: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            position: relative;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: red;
+            transition: 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px 40px;
+            flex-wrap: wrap;
+            background: url("https://www.transparenttextures.com/patterns/white-wall-3.png");
+        }
+
+        .hero-text {
+            flex: 1 1 400px;
+            max-width: 500px;
+            animation: fadeInLeft 1s ease;
+        }
+
+        .hero-text h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #c10000;
+        }
+
+        .hero-text p {
+            font-size: 16px;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .hero-text button {
+            background-color: red;
+            color: white;
+            padding: 14px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .hero-text button:hover {
+            background-color: darkred;
+            transform: scale(1.03);
+        }
+
+        .hero img {
+            flex: 1 1 300px;
+            max-width: 400px;
+            width: 100%;
+            margin-top: 30px;
+            animation: fadeInRight 1s ease;
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .section-title {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #c10000;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 3px;
+            background-color: red;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .gift-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .gift-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .gift-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .gift-card img {
+            max-width: 70px;
+            margin-bottom: 12px;
+        }
+
+        .gift-card p {
+            font-size: 16px;
+            font-weight: 500;
+            color: #c10000;
+        }
+
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px 20px;
+            }
+
+            .hero-text {
+                max-width: 100%;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Roda <span>Undian GRATIS</span></div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="login.html">Login Roda</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Undian GRATIS<br />Putar Keberuntungan Anda!</h1>
+            <p>Klik tombol di bawah untuk memutar roda keberuntungan. Siapa tahu Anda adalah pemenangnya hari ini!</p>
+            <button onclick="location.href='login.html'">Putar Roda Undian →</button>
+        </div>
+        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055648.png" alt="Ilustrasi Roda Undian" />
+    </section>
+
+    <div class="section-title">Hadiah Yang Akan Didapatkan</div>
+    <section class="gift-grid">
+        <div class="gift-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3104/3104890.png" alt="Smartphone" />
+            <p>Smartphone</p>
+        </div>
+        <div class="gift-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3418/3418864.png" alt="Kuota Internet" />
+            <p>Kuota Internet</p>
+        </div>
+        <div class="gift-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2674/2674637.png" alt="Headset" />
+            <p>Headset Bluetooth</p>
+        </div>
+        <div class="gift-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/219/219983.png" alt="Voucher" />
+            <p>Voucher Belanja</p>
+        </div>
+        <div class="gift-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/864/864685.png" alt="Saldo E-wallet" />
+            <p>Saldo E-Wallet</p>
+        </div>
+    </section>
+
+</body>
+
+</html>
